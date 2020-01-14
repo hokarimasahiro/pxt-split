@@ -9,7 +9,7 @@ namespace split {
  */
 //% blockId="文字列を分解" block="文字列を分解 %text"
 //% weight=100 blockGap=8
-    function split(text: string):string[] {
+    export function split(text: string):string[] {
         let work: string[] = []
         for (let index = 0; index < text.length ; index++) {
             if (text.charAt(index) == ",") {
