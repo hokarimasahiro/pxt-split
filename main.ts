@@ -27,13 +27,12 @@ namespace split {
     //% blockId="数値を分解" block="数値を分解 %text"
     //% weight=100 blockGap=8
     export function splitNum(text: string): number[] {
+        let workS:string[];
         let work: number[] = [0]
-        for (let index = 0; index < text.length; index++) {
-            if (text.charAt(index) == ",") {
-                work.push(0)
-            } else {
-                work[work.length - 1] = work[work.length - 1] * 10 + parseInt(text.charAt(index))
-            }
+
+        workS=split(text)
+        for (let index = 0; index < workS.length; index++) {
+            work[index] = parseInt(workS(index))
         }
         return work;
     }
